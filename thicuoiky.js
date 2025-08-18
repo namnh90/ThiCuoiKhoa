@@ -99,6 +99,7 @@ document.getElementsByClassName('btn-1-1-start')[0].addEventListener('click', ()
     document.getElementsByClassName('btn-1-1-stop')[0].style.display = "flex";
     document.getElementsByClassName('text_chien_thang')[0].style.display="none";
     sec = 0;
+    count_move = 1;
     batdaugame = true;
     checkdemgio = setInterval(() => {
         sec++;
@@ -110,7 +111,8 @@ document.getElementsByClassName('btn-1-1-stop')[0].addEventListener('click', () 
     if (checkdemgio) {
         clearInterval(checkdemgio);
         checkdemgio = null;
-        batdaugame = false
+        batdaugame = false;
+        count_move = 1;
         document.getElementsByClassName('timecount')[0].textContent = "00:00";
         document.getElementsByClassName('btn-1-1-stop')[0].style.display = "none";
         document.getElementsByClassName('btn-1-1-start')[0].style.display = "";
